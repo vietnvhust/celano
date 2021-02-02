@@ -293,4 +293,22 @@ ul, ol {
   padding: 0;
   margin: 0;
 }
+/* Button */
+.btn {
+  padding: 1rem 3rem;
+  border: 1px solid ${configGlobal.colorBorder};
+  cursor: pointer;
+  transition: ${configGlobal.transition};
+}
+.btn:hover {
+  transition: ${configGlobal.transition};
+}
+.btn-primary {
+  background-color: ${configGlobal.colorTitle};
+  color: white;
+}
+.btn-primary:hover {
+  background-color: white;
+  color: ${configGlobal.colorTitle};
+}
 `;

@@ -7,6 +7,3 @@ function Heading({tag,text,...props}) {
     )
 }
 export default React.memo(Heading)
-const HeadingWrap = styled.div`
-
-`;

@@ -4,7 +4,7 @@ import { configGlobal } from '../../assets/styledGlobal/configGlobal';
 
 function Divider() {
     return (
-        <DividerWrap className="pt-1">
+        <DividerWrap className="pt-2 pb-1">
             <span></span>
         </DividerWrap>
     )
