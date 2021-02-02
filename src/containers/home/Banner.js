@@ -22,4 +22,7 @@ const BannerWrap = styled.div`
     background-position: center center;
     background-size: cover;
     padding: 230px 0;
+    h1 {
+        
+    }
 `;
