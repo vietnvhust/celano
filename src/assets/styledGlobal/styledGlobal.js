@@ -102,9 +102,11 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
 .text-normal {
   text-transform: none;
 }
+.text-cap,
 .text-capitalize {
   text-transform: capitalize;
 }
+.text-upp,
 .text-uppercase {
   text-transform: uppercase;
 }
@@ -296,7 +298,6 @@ ul, ol {
 /* Button */
 .btn {
   padding: 1rem 3rem;
-  border: 1px solid ${configGlobal.colorBorder};
   cursor: pointer;
   transition: ${configGlobal.transition};
 }
@@ -304,11 +305,25 @@ ul, ol {
   transition: ${configGlobal.transition};
 }
 .btn-primary {
+  border: 1px solid ${configGlobal.colorBorder};
   background-color: ${configGlobal.colorTitle};
   color: white;
+  border-color: ${configGlobal.colorTitle};
 }
 .btn-primary:hover {
   background-color: white;
   color: ${configGlobal.colorTitle};
+  border-color: ${configGlobal.colorTitle};
+}
+.btn-secondary {
+  border: 1px solid white;
+  background-color: white;
+  color: ${configGlobal.colorTitle};
+  border-color: ${configGlobal.colorTitle};
+}
+.btn-secondary:hover {
+  background-color: ${configGlobal.colorTitle};
+  color: white;
+  border-color: white;
 }
 `;

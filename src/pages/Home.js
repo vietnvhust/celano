@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import { configGlobal } from '../assets/styledGlobal/configGlobal';
-import Banner from '../containers/home/Banner'
+import SectionBanner from '../containers/home/SectionBanner'
+import SectionWoman from '../containers/home/SectionWoman';
 
 export default function Home() {
     return (
         <HomeWrap className="home">
-            <section>
-                <Banner />
-            </section>
+            <SectionBanner />
+            <SectionWoman />
         </HomeWrap>
     )
 }

@@ -1,0 +1,46 @@
+import React from 'react'
+import styled from 'styled-components'
+import { configGlobal } from '../../../../assets/styledGlobal/configGlobal'
+import Heading from '../../../core/Heading'
+import Img from '../../../core/Img'
+import ProductImg from './../../../../assets/images/product1.jpg'
+
+export default function ProductItem({title, newStatus, regular_price, salce_price,img}) {
+    return (
+        <ProductItemWrap className="col-fb-4">
+            {newStatus === true && (<div className="badge text-upp">New</div>)}
+            <Img src={ProductImg} alt={title} />
+            <Heading tag='h6' className="mt-1 mb-1" text={title} />
+            <div className="price">
+                {
+                    regular_price && (<span className="regular_price">{regular_price}</span>)
+                }
+                {
+                    salce_price && (<span className="salce_price">{salce_price}</span>)
+                }
+            </div>
+        </ProductItemWrap> 
+    )
+}
+const ProductItemWrap = styled.div`
+    position: relative;
+    .badge {
+        font-size: 12px;
+        font-weight: bold;
+        background-color: ${configGlobal.colorPrimary};
+        color: white;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 3px;
+    }
+    .price {
+        .regular_price {
+            margin-right: 0.5rem;
+        }
+        .salce_price {
+            color: ${configGlobal.colorDesc};
+            text-decoration: line-through;
+        }
+    }
+`;

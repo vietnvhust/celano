@@ -10,7 +10,9 @@ function App() {
     <Router>
       <StyledGlobal/>
       <Header/>
-      <MainRouter/>
+      <main>
+        <MainRouter/>
+      </main>
       <Footer/>
     </Router>
   );
