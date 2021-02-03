@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import SectionWomanLeft from './../../components/ui/home/SectionWoman/SectionWomanLeft';
-import SectionWomanRight from './../../components/ui/home/SectionWoman/SectionWomanRight';
 import ProductsContextProvider from './../../contexts/Products.context';
+import SectionWomanRight from './SectionWomanRight';
 
 export default function Woman() {
     return (

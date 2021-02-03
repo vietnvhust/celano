@@ -21,6 +21,12 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
   box-shadow: none;
 }
 
+.form-control {
+  border: 1px solid ${configGlobal.colorDesc};
+  box-sizing: border-box;
+  height: 48px;
+}
+
 /* Container */
 .container {
   max-width: 1170px;
