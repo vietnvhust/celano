@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Loading() {
+function Loading() {
     return (
         <div>
             Loading...
         </div>
     )
 }
+export default React.memo(Loading)

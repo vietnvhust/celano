@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import StartEmptyImg from './../../assets/images/start-empty.svg'
 import StartImg from './../../assets/images/start.svg'
 import Img from './Img'
-export default function Rating({withRating}) {
+function Rating({withRating}) {
     return (
         <RatingWrap className="rating-wrap mb-1">
             <div className="rating">
@@ -25,6 +25,7 @@ export default function Rating({withRating}) {
         </RatingWrap>
     )
 }
+export default React.memo(Rating)
 const RatingWrap = styled.div`
     .rating {
         position: relative;
