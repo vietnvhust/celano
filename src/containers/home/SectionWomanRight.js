@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { ProductsContext } from '../../contexts/Products.context'
+import { HomeContext } from '../../contexts/Products.context'
 import styled from 'styled-components'
 import ProductItem from '../../components/ui/home/SectionWoman/ProductItem';
 export default function SectionWomanRight() {
-    const {products} = useContext(ProductsContext)
+    const {products} = useContext(HomeContext)
     return (
         <div className="col-fb-8">
             <SectionWomanRightWrap className="pl-5">

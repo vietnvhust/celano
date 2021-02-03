@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
-export const ProductsContext = createContext()
-const ProductsContextProvider = ({children}) => {
+export const HomeContext = createContext();
+const HomeContextProvider = ({children}) => {
     const [products, setProducts] = useState({})
     useEffect(() => {
         async function fetchData() {
@@ -10,16 +10,13 @@ const ProductsContextProvider = ({children}) => {
                 .then(res => setProducts(res))
                 .catch(err => console.log(err));
         }
-      
         fetchData();
     }, [])
-    const ProductsContextValue = {
-        products
-    }
+    const HomeContextValue = {products}
     return (
-        <ProductsContext.Provider value={ProductsContextValue} >
+        <HomeContext.Provider value={HomeContextValue}>
             {children}
-        </ProductsContext.Provider>
+        </HomeContext.Provider>
     )
 }
-export default ProductsContextProvider;
+export default HomeContextProvider

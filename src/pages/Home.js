@@ -6,6 +6,7 @@ import SectionBanner from './../components/ui/home/SectionBanner/SectionBanner';
 import SectionWoman from './../containers/home/SectionWoman';
 import SectionAds from '../components/ui/home/SectionAds/SectionAds';
 import SectionNewsletter from '../components/ui/home/SectionNewsletter/SectionNewsletter';
+import SectionBlog from '../containers/blog/SectionBlog';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
             <SectionAds />
             <SectionWoman />
             <SectionNewsletter />
+            <SectionBlog />
         </HomeWrap>
     )
 }

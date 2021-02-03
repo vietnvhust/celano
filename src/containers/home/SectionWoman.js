@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import SectionWomanLeft from './../../components/ui/home/SectionWoman/SectionWomanLeft';
-import ProductsContextProvider from './../../contexts/Products.context';
+import HomeContextProvider from './../../contexts/Products.context';
 import SectionWomanRight from './SectionWomanRight';
 
 export default function Woman() {
@@ -11,9 +11,9 @@ export default function Woman() {
                 <div className="container">
                     <div className="row-fb">
                         <SectionWomanLeft />
-                        <ProductsContextProvider>
+                        <HomeContextProvider>
                             <SectionWomanRight />
-                        </ProductsContextProvider>
+                        </HomeContextProvider>
                     </div>
                 </div>
             </WomanWrap>
