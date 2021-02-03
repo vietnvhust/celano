@@ -1,8 +1,8 @@
 import React, { Suspense } from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Loading from '../components/core/Loading'
-const Home = React.lazy(() => import('../pages/Home'))
-const About = React.lazy(() => import('../pages/About'))
+import Loading from './../components/core/Loading'
+const Home = React.lazy(() => import('./../pages/Home'))
+const About = React.lazy(() => import('./../pages/About'))
 const routers = [
     {
         path: '/',

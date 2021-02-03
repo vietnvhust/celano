@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../../../core/Button';
-import Heading from '../../../core/Heading';
-import IconText from '../../../core/IconText';
-import Img from '../../../core/Img';
+import Button from './../../../core/Button';
+import Heading from './../../../core/Heading';
+import IconText from './../../../core/IconText';
+import Img from './../../../core/Img';
 import WomenImg from './../../../../assets/images/women.jpg'
 export default function SectionWomanLeft() {
     return (

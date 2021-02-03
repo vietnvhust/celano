@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { configGlobal } from '../../../../assets/styledGlobal/configGlobal'
-import Heading from '../../../core/Heading'
-import Img from '../../../core/Img'
-import Rating from '../../../core/Rating'
+import { configGlobal } from './../../../../assets/styledGlobal/configGlobal'
+import Heading from './../../../core/Heading'
+import Img from './../../../core/Img'
+import Rating from './../../../core/Rating'
 import ProductImg from './../../../../assets/images/product1.jpg'
 
 export default function ProductItem({title, newStatus, regular_price, salce_price,img, rating}) {

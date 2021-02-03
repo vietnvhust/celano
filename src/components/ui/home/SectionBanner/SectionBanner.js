@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import Button from '../../components/core/Button'
-import Divider from '../../components/core/Divider'
-import Heading from '../../components/core/Heading'
-import BannerImg from './../../assets/images/banner.jpg'
-import ArrowRightImg from './../../assets/images/arrow-right.svg'
-import ArrowRightHoverImg from './../../assets/images/arrow-right-hover.svg'
-import { configGlobal } from '../../assets/styledGlobal/configGlobal'
-import { useHover } from '../../components/core/hooks/useHover'
+import Button from './../../../core/Button'
+import Divider from './../../../core/Divider'
+import Heading from './../../../core/Heading'
+import BannerImg from './../../../../assets/images/banner.jpg'
+import ArrowRightImg from './../../../../assets/images/arrow-right.svg'
+import ArrowRightHoverImg from './../../../../assets/images/arrow-right-hover.svg'
+import { configGlobal } from './../../../../assets/styledGlobal/configGlobal'
+import { useHover } from './../../../../components/core/hooks/useHover'
 function SectionBanner() {
     const [refHover, ishover] = useHover()
     return (
