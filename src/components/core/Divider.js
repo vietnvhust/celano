@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { configGlobal } from '../../assets/styledGlobal/configGlobal';
 
-function Divider() {
+function Divider({widthDivider, colorBorder}) {
     return (
-        <DividerWrap className="pt-2 pb-1">
+        <DividerWrap widthDivider={widthDivider} colorBorder={colorBorder} className="pt-2 pb-1">
             <span></span>
         </DividerWrap>
     )
@@ -13,8 +13,8 @@ export default React.memo(Divider)
 const DividerWrap = styled.div`
     display: flex;
     span {
-        width: 100px;
+        width: ${props => props.widthDivider ? props.widthDivider : "100%"};
         height: 1px;
-        background-color: ${configGlobal.colorTitle};
+        background-color: ${props => props.colorBorder ? props.colorBorder : configGlobal.colorTitle};
     }
 `;

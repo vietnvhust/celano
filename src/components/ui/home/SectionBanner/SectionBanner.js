@@ -15,7 +15,7 @@ function SectionBanner() {
             <BannerWrap ref={refHover} ishover={ishover}>
                 <div className="container">
                     <Heading tag='p' className="text-left text-uppercase" text="Spring Collection" />
-                    <Divider />
+                    <Divider widthDivider="100px" />
                     <Heading tag='h1' className="text-left text-capitalize" text="Discover our New & Modern Design" />
                     <Button tag='button' type="button" className="btn btn-primary text-uppercase d-flex ai-center mt-3" text="Discover now" />
                 </div>

@@ -40,6 +40,15 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
 .ai-center{
   align-items: center;
 }
+.jc-bw {
+  justify-content: space-between;
+}
+.jc-center {
+  justify-content: center;
+}
+.jc-sa {
+  justify-content: space-around
+}
 .row-fb {
   display: flex;
   flex-flow: row wrap;
@@ -348,5 +357,9 @@ ul, ol {
 }
 .w-100 {
   width: 100%;
+}
+/* Img */
+img {
+  max-width: 100%;
 }
 `;

@@ -16,7 +16,7 @@ export default function SectionBlog() {
                 <div className="item-wrap mt-3">
                     <div className="row-fb">
                         {
-                            posts.length > 0 && posts.map(({title, author, desc, date, img, comment}, index) => <BlogItem key={index} title={title} author={author} desc={desc} date={date} img={Blog1} comment={comment} /> )
+                            posts.length > 0 && posts.map(({title, author, desc, date, img, comments}, index) => <BlogItem key={index} title={title} author={author} desc={desc} date={date} img={Blog1} comments={comments} /> )
                         }              
                     </div>
                 </div>
@@ -25,5 +25,8 @@ export default function SectionBlog() {
     )
 }
 const SectionBlogWrap = styled.section`
-
+    .row-fb {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
 `;
