@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Heading from '../../../core/Heading'
 import Img from '../../../core/Img'
 import CommentImg from '../../../../assets/images/comment.png'
+import { configGlobal } from '../../../../assets/styledGlobal/configGlobal'
 export default function BlogItem({title, author, desc, date, img, comments}) {
     return (
         <BlogItemWrap className="col-fb-4">
@@ -12,7 +13,7 @@ export default function BlogItem({title, author, desc, date, img, comments}) {
                 <Heading tag="p" text={desc} className="mb-1" />
                 <div className="meta d-flex jc-bw">
                     <p>by <span>{author}</span> on {date}</p>
-                    <div>
+                    <div className="comments">
                         <Img src={CommentImg} alt="Comment" /> {comments}
                     </div>
                 </div>
@@ -28,5 +29,9 @@ const BlogItemWrap = styled.div`
 
     & > img {
         width: 100%;
+    }
+
+    .comments {
+        color: ${configGlobal.colorDesc}
     }
 `;
