@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { HomeContext } from '../../contexts/Products.context'
+import { HomeContext } from '../../contexts/Home.context'
 import styled from 'styled-components'
 import ProductItem from '../../components/ui/home/SectionWoman/ProductItem';
 export default function SectionWomanRight() {

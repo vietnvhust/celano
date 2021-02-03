@@ -6,17 +6,20 @@ import SectionBanner from './../components/ui/home/SectionBanner/SectionBanner';
 import SectionWoman from './../containers/home/SectionWoman';
 import SectionAds from '../components/ui/home/SectionAds/SectionAds';
 import SectionNewsletter from '../components/ui/home/SectionNewsletter/SectionNewsletter';
-import SectionBlog from '../containers/blog/SectionBlog';
+import SectionBlog from '../containers/home/SectionBlog';
+import HomeContextProvider from '../contexts/Home.context';
 
 export default function Home() {
     return (
         <HomeWrap className="home">
-            <SectionBanner />
-            <SectionWoman />
-            <SectionAds />
-            <SectionWoman />
-            <SectionNewsletter />
-            <SectionBlog />
+            <HomeContextProvider>
+                <SectionBanner />
+                <SectionWoman />
+                <SectionAds />
+                <SectionWoman />
+                <SectionNewsletter />
+                <SectionBlog />
+            </HomeContextProvider>
         </HomeWrap>
     )
 }
