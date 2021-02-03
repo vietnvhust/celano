@@ -3,15 +3,17 @@ import styled from 'styled-components'
 import { configGlobal } from '../../../../assets/styledGlobal/configGlobal'
 import Heading from '../../../core/Heading'
 import Img from '../../../core/Img'
+import Rating from '../../../core/Rating'
 import ProductImg from './../../../../assets/images/product1.jpg'
 
-export default function ProductItem({title, newStatus, regular_price, salce_price,img}) {
+export default function ProductItem({title, newStatus, regular_price, salce_price,img, rating}) {
+    const withRating = (rating*100) / 5;
     return (
         <ProductItemWrap className="col-fb-4">
             {newStatus === true && (<div className="badge text-upp">New</div>)}
             <Img src={ProductImg} alt={title} />
             <Heading tag='h6' className="mt-1 mb-1" text={title} />
-            <div className="price">
+            <div className="price mb-1">
                 {
                     regular_price && (<span className="regular_price">{regular_price}</span>)
                 }
@@ -19,6 +21,7 @@ export default function ProductItem({title, newStatus, regular_price, salce_pric
                     salce_price && (<span className="salce_price">{salce_price}</span>)
                 }
             </div>
+            <Rating withRating={withRating} />
         </ProductItemWrap> 
     )
 }
@@ -42,5 +45,5 @@ const ProductItemWrap = styled.div`
             color: ${configGlobal.colorDesc};
             text-decoration: line-through;
         }
-    }
+    }    
 `;

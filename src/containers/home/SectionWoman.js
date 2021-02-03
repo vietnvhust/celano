@@ -6,7 +6,7 @@ import ProductsContextProvider from '../../contexts/Products.context';
 
 export default function Woman() {
     return (
-        <section className="mt-5">
+        <section className="mt-5 mb-5">
             <WomanWrap>
                 <div className="container">
                     <div className="row-fb">

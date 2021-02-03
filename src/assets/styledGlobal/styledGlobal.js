@@ -301,6 +301,9 @@ ul, ol {
   cursor: pointer;
   transition: ${configGlobal.transition};
 }
+.btn.smaller {
+  padding: 3px 10px;
+}
 .btn:hover {
   transition: ${configGlobal.transition};
 }
@@ -325,5 +328,18 @@ ul, ol {
   background-color: ${configGlobal.colorTitle};
   color: white;
   border-color: white;
+}
+/* Width */
+.w-25 {
+  width: 25%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-75 {
+  width: 75%;
+}
+.w-100 {
+  width: 100%;
 }
 `;

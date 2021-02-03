@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Button from '../../components/core/Button'
 import Divider from '../../components/core/Divider'
@@ -7,28 +7,12 @@ import BannerImg from './../../assets/images/banner.jpg'
 import ArrowRightImg from './../../assets/images/arrow-right.svg'
 import ArrowRightHoverImg from './../../assets/images/arrow-right-hover.svg'
 import { configGlobal } from '../../assets/styledGlobal/configGlobal'
+import { useHover } from '../../components/core/hooks/useHover'
 function SectionBanner() {
-    const [value, setValue] = useState(false);
-    const refHover = useRef(null)
-    const handleMouseOver = () => setValue(true);
-    const handleMouseOut = () => setValue(false);
-    useEffect(
-        () => {
-            const node = refHover.current
-            if (node) {
-                node.addEventListener('mouseover', handleMouseOver);
-                node.addEventListener('mouseout', handleMouseOut);
-                return () => {
-                    node.removeEventListener('mouseover', handleMouseOver);
-                    node.removeEventListener('mouseout', handleMouseOut);
-                };
-            }
-        },
-        [refHover.current] // Recall only if ref changes
-    );
+    const [refHover, ishover] = useHover()
     return (
         <section>
-            <BannerWrap ref={refHover} ishover={value}>
+            <BannerWrap ref={refHover} ishover={ishover}>
                 <div className="container">
                     <Heading tag='p' className="text-left text-uppercase" text="Spring Collection" />
                     <Divider />

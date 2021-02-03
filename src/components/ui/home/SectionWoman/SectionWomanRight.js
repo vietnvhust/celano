@@ -9,9 +9,8 @@ export default function SectionWomanRight() {
             <SectionWomanRightWrap className="pl-5">
                 <div className="row-fb">
                     {
-                        products.length > 0 && products.map(({title, newStatus, regular_price, salce_price,img}, index) => <ProductItem key={index} title={title} newStatus={newStatus} regular_price={regular_price} salce_price={salce_price} img={img} />)
+                        products.length > 0 && products.map(({title, newStatus, regular_price, salce_price,img, rating}, index) => <ProductItem key={index} title={title} newStatus={newStatus} regular_price={regular_price} salce_price={salce_price} img={img} rating={rating} />)
                     }
-                      
                 </div>
             </SectionWomanRightWrap>
         </div>
