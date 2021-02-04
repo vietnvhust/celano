@@ -129,7 +129,7 @@ const FooterBottomWrap = styled.div`
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid ${configGlobal.colorBorder};
+            border: 1px solid #888888;
             margin: 0 5px;
         }
     }
