@@ -29,10 +29,12 @@ export default function SectionAds() {
                 {
                     items.length > 0 && items.map(({img,p,h3}, index) => 
                         <div key={index} className="col-fb-4">
-                            <div className="ads-item" style={{ backgroundImage: `url(${img})` }}>
-                                <div className="ads-item__inner text-center">
-                                    <Heading tag="p" text={p} className="text-upp" />
-                                    <Heading tag="h3" text={h3} className="text-upp" />
+                            <div className="inner">
+                                <div className="ads-item" style={{ backgroundImage: `url(${img})` }}>
+                                    <div className="ads-item__inner text-center">
+                                        <Heading tag="p" text={p} className="text-upp" />
+                                        <Heading tag="h3" text={h3} className="text-upp" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -43,6 +45,16 @@ export default function SectionAds() {
     )
 }
 const SectionAdsWrap = styled.section`
+    padding-left: 15px;
+    padding-right: 15px;
+    .row-fb {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .inner {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .ads-item {
         background-size: cover;
         background-repeat: no-repeat;

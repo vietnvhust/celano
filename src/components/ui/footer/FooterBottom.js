@@ -88,7 +88,7 @@ export default function FooterBottom() {
                             <ul className="socials d-flex ai-center jc-center">
                                 {
                                     socialItems.length > 0 && socialItems.map(({icon, iconHover}, index) => 
-                                        <li ref={refhover} key={index}>
+                                        <li ref={refhover} className={ishover ? 'active': ''} key={index}>
                                             {
                                                 ishover ? (<Img src={iconHover} alt="Social" />) : (<Img src={icon} alt="Social" />)
                                             }
