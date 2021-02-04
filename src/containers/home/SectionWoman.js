@@ -1,16 +1,26 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
-import SectionWomanLeft from './../../components/ui/home/SectionWoman/SectionWomanLeft';
-import SectionWomanRight from './SectionWomanRight';
+import ProductItem from '../../components/ui/home/SectionWoman/ProductItem';
+import SectionWomanAside from '../../components/ui/home/SectionWoman/SectionWomanAside';
+import { HomeContext } from '../../contexts/Home.context';
 
 export default function Woman() {
+    const {products} = useContext(HomeContext)
     return (
         <section className="mt-5 mb-5">
             <WomanWrap>
                 <div className="container">
                     <div className="row-fb">
-                        <SectionWomanLeft />
-                        <SectionWomanRight />
+                        <SectionWomanAside />
+                        <div className="col-fb-8">
+                            <div className="pl-5">
+                                <div className="row-fb">
+                                    {
+                                        products.length > 0 && products.map(({title, newStatus, regular_price, salce_price,img, rating}, index) => <ProductItem key={index} title={title} newStatus={newStatus} regular_price={regular_price} salce_price={salce_price} img={img} rating={rating} />)
+                                    }
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </WomanWrap>

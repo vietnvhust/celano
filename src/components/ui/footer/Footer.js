@@ -8,14 +8,11 @@ import FooterTop from './FooterTop'
 export default function Footer() {
     return (
         <FooterWrap>
-            <FooterTop/>
-            <FooterMain/>
             <FooterBottom/>
             <FooterAbsolute/>
         </FooterWrap>
     )
 }
 const FooterWrap = styled.footer`
-    background-color: black;
-    color: white;
+    background-color: white;
 `;

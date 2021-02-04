@@ -7,15 +7,32 @@ import Logo3 from '../../../../assets/images/logo3.png'
 import Logo4 from '../../../../assets/images/logo4.png'
 import Logo5 from '../../../../assets/images/logo5.png'
 import Logo6 from '../../../../assets/images/logo6.png'
+const items = [
+    {
+        icon: Logo1
+    },
+    {
+        icon: Logo2
+    },
+    {
+        icon: Logo3
+    },
+    {
+        icon: Logo4
+    },
+    {
+        icon: Logo5
+    },
+    {
+        icon: Logo6
+    },
+]
 export default function SectionLogo() {
     return (
         <SectionLogoWrap className="d-flex jc-sa">
-            <Img src={Logo1} alt="Logo" />
-            <Img src={Logo2} alt="Logo" />
-            <Img src={Logo3} alt="Logo" />
-            <Img src={Logo4} alt="Logo" />
-            <Img src={Logo5} alt="Logo" />
-            <Img src={Logo6} alt="Logo" />
+            {
+                items.length > 0 && items.map(({icon}, index) => <Img key={index} src={icon} alt="Logo" />)
+            }
         </SectionLogoWrap>
     )
 }

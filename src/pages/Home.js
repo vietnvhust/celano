@@ -10,6 +10,8 @@ import SectionBlog from '../containers/home/SectionBlog';
 import HomeContextProvider from '../contexts/Home.context';
 import Divider from '../components/core/Divider';
 import SectionLogo from '../components/ui/home/SectionLogo/SectionLogo';
+import SectionInstagram from '../components/ui/home/SectionInstagram/SectionInstagram';
+import SectionEndHome from '../components/ui/home/SectionEndHome/SectionEndHome';
 
 export default function Home() {
     return (
@@ -27,6 +29,11 @@ export default function Home() {
                     <Divider colorBorder="#f0f0f0" />
                 </div>
             </HomeContextProvider>
+            <SectionInstagram />
+            <div className="container mb-3 mt-3">
+                <SectionEndHome />
+                <Divider colorBorder="#f0f0f0" />
+            </div>
         </HomeWrap>
     )
 }

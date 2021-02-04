@@ -33,6 +33,10 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
   margin: auto;
   width: 100%;
 }
+/* Block */
+.d-block {
+  display: block
+}
 /* Flex */
 .d-flex {
   display: flex;
@@ -58,8 +62,8 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
   flex-basis: 8.33%;
 }
 .col-fb-2 {
-  max-width: 16.67%;
-  flex-basis: 16.67%;
+  max-width: 16.66%;
+  flex-basis: 16.66%;
 }
 .col-fb-3 {
   max-width: 25%;
@@ -70,8 +74,8 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
   flex-basis: 33.33%;
 }
 .col-fb-5 {
-  max-width: 41.67%;
-  flex-basis: 41.67%;
+  max-width: 41.66%;
+  flex-basis: 41.66%;
 }
 .col-fb-6 {
   max-width: 50%;
@@ -94,8 +98,8 @@ input, input:focus, button, button:focus, select, select:focus, textarea, textar
   flex-basis: 83.33%;
 }
 .col-fb-11 {
-  max-width: 91.67%;
-  flex-basis: 91.67%;
+  max-width: 91.66%;
+  flex-basis: 91.66%;
 }
 .col-fb-12 {
   max-width: 100%;
@@ -361,5 +365,12 @@ ul, ol {
 /* Img */
 img {
   max-width: 100%;
+}
+/* Float */
+.float-right {
+  float: right
+}
+.float-left {
+  float: left
 }
 `;
