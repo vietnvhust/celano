@@ -6,6 +6,7 @@ export const StyledGlobal = createGlobalStyle`
 a, a:hover {
   text-decoration: none;
   transition: var(--transition);
+  cursor: pointer;
 }
 
 a {
