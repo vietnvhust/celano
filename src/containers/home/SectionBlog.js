@@ -16,7 +16,7 @@ export default function SectionBlog() {
                 <div className="item-wrap mt-3">
                     <div className="row-fb">
                         {
-                            posts.length > 0 && posts.map(({title, author, desc, date, img, comments}, index) => <BlogItem key={index} title={title} author={author} desc={desc} date={date} img={Blog1} comments={comments} /> )
+                            posts.length > 0 && posts.map(({title, author, desc, date, img, comments}, index) => <BlogItem key={index} title={title} author={author} desc={desc} date={date} img={img} comments={comments} /> )
                         }              
                     </div>
                 </div>

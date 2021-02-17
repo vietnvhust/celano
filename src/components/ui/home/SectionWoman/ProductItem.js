@@ -11,7 +11,7 @@ export default function ProductItem({title, newStatus, regular_price, salce_pric
     return (
         <ProductItemWrap className="col-fb-4">
             {newStatus === true && (<div className="badge text-upp">New</div>)}
-            <Img src={ProductImg} alt={title} />
+            <Img src={img} alt={title} />
             <Heading tag='h6' className="mt-1 mb-1" text={title} />
             <div className="price mb-1">
                 {

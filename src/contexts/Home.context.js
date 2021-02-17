@@ -5,7 +5,7 @@ const HomeContextProvider = ({children}) => {
     const [posts, setPosts] = useState({})
     useEffect(() => {
         async function fetchProduct() {
-            const res = await fetch("http://localhost:3000/products");
+            const res = await fetch("https://602ca1b430ba72001722333e.mockapi.io/Product");
             res
                 .json()
                 .then(res => setProducts(res))
@@ -15,7 +15,7 @@ const HomeContextProvider = ({children}) => {
     }, [])
     useEffect(() => {
         async function fetchPost() {
-            const res = await fetch("http://localhost:3000/posts");
+            const res = await fetch("https://602ca4e530ba720017223363.mockapi.io/Post");
             res
                 .json()
                 .then(res => setPosts(res))
