@@ -18,6 +18,7 @@ import LinkedinHoverIcon from '../../../assets/images/linkedin-in-hover.svg'
 import PinterestIcon from '../../../assets/images/pinterest-p.svg'
 import PinterestHoverIcon from '../../../assets/images/pinterest-p-hover.svg'
 import { useHover } from '../../core/hooks/useHover'
+import FooterBottomItem from './FooterBottomItem'
 const ulItems = [
     {
         icon: LocationImg,
@@ -88,11 +89,7 @@ export default function FooterBottom() {
                             <ul className="socials d-flex ai-center jc-center">
                                 {
                                     socialItems.length > 0 && socialItems.map(({icon, iconHover}, index) => 
-                                        <li ref={refhover} className={ishover ? 'active': ''} key={index}>
-                                            {
-                                                ishover ? (<Img src={iconHover} alt="Social" />) : (<Img src={icon} alt="Social" />)
-                                            }
-                                        </li>
+                                        <FooterBottomItem  key={index} icon={icon} iconHover={iconHover} />
                                     )
                                 }
                             </ul>
@@ -131,6 +128,12 @@ const FooterBottomWrap = styled.div`
             align-items: center;
             border: 1px solid #888888;
             margin: 0 5px;
+            transition: ${configGlobal.transition};
+            &.active {
+                transition: ${configGlobal.transition};
+                background: ${configGlobal.colorPrimary};
+                border-color: ${configGlobal.colorPrimary};
+            }
         }
     }
 `;
