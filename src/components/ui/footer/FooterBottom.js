@@ -76,7 +76,7 @@ export default function FooterBottom() {
                 <div className="row-fb">
                     <div className="col-fb-4">
                         <Heading tag="h6" text="Contact us" className="text-upp mb-2" />
-                        <ul>
+                        <ul className="info">
                             {
                                 ulItems.length > 0 && ulItems.map(({icon, text}, index) => <li key={index}><Img src={icon} alt={text} /><span>{text}</span></li>)
                             }
@@ -115,7 +115,7 @@ const FooterBottomWrap = styled.div`
     li {
         line-height: 30px;
     }
-    img {
+    .info img {
         margin-right: 5px;
     }
     span {
