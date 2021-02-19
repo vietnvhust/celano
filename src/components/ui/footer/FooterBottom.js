@@ -17,7 +17,7 @@ import LinkedinIcon from '../../../assets/images/linkedin-in.svg'
 import LinkedinHoverIcon from '../../../assets/images/linkedin-in-hover.svg'
 import PinterestIcon from '../../../assets/images/pinterest-p.svg'
 import PinterestHoverIcon from '../../../assets/images/pinterest-p-hover.svg'
-import { useHover } from '../../core/hooks/useHover'
+// import { useHover } from '../../core/hooks/useHover'
 import FooterBottomItem from './FooterBottomItem'
 const ulItems = [
     {
@@ -70,7 +70,7 @@ const socialItems = [
     }
 ]
 export default function FooterBottom() {
-    const [refhover, ishover] = useHover();
+    // const [refhover, ishover] = useHover();
     return (
         <FooterBottomWrap className="mb-4">
             <div className="container">

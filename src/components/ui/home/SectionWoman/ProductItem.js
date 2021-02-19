@@ -4,15 +4,15 @@ import { configGlobal } from './../../../../assets/styledGlobal/configGlobal'
 import Heading from './../../../core/Heading'
 import Img from './../../../core/Img'
 import Rating from './../../../core/Rating'
-import ProductImg from './../../../../assets/images/product1.jpg'
+// import ProductImg from './../../../../assets/images/product1.jpg'
 
-export default function ProductItem({title, newStatus, regular_price, salce_price,img, rating}) {
+export default function ProductItem({name, newStatus, regular_price, salce_price,img, rating}) {
     const withRating = (rating*100) / 5;
     return (
         <ProductItemWrap className="col-fb-4">
             {newStatus === true && (<div className="badge text-upp">New</div>)}
-            <Img src={img} alt={title} />
-            <Heading tag='h6' className="mt-1 mb-1" text={title} />
+            <Img src={img} alt={name} />
+            <Heading tag='h6' className="mt-1 mb-1" text={name} />
             <div className="price mb-1">
                 {
                     regular_price && (<span className="regular_price">{regular_price}</span>)

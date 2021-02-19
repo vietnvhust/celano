@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+// import styled from 'styled-components'
 
 function Button({tag,text,...props}) {
     return (
@@ -9,6 +9,6 @@ function Button({tag,text,...props}) {
     )
 }
 export default React.memo(Button)
-const ButtonWrap = styled.div`
+// const ButtonWrap = styled.div`
     
-`;
+// `;

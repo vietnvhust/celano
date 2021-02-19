@@ -16,7 +16,7 @@ export default function Woman() {
                             <div className="pl-5">
                                 <div className="row-fb">
                                     {
-                                        products.length > 0 && products.map(({title, newStatus, regular_price, salce_price,img, rating}, index) => <ProductItem key={index} title={title} newStatus={newStatus} regular_price={regular_price} salce_price={salce_price} img={img} rating={rating} />)
+                                        products.length > 0 && products.map(({name, newStatus, regular_price, salce_price,img, rating}, index) => <ProductItem key={index} name={name} newStatus={newStatus} regular_price={regular_price} salce_price={salce_price} img={img} rating={rating} />)
                                     }
                                 </div>
                             </div>

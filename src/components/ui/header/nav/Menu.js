@@ -10,6 +10,14 @@ export default function Menu() {
         {
             href: "/about",
             text: "About"
+        },
+        {
+            href: "/faq",
+            text: "Faq"
+        },
+        {
+            href: "/products",
+            text: "Products"
         }
     ]
     return (

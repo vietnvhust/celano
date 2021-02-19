@@ -308,7 +308,10 @@ p {
   color: ${configGlobal.colorDesc}
 }
 h1,h2,h3,h4,h5,h6,p {
-    margin: 0;
+  margin: 0;
+}
+h1,h2,h3,h4,h5,h6 {
+  color: ${configGlobal.colorTitle};
 }
 /* Ul, Ol */
 ul, ol {

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Heading from '../../components/core/Heading'
 import BlogItem from '../../components/ui/home/SectionBlog/BlogItem'
 import { HomeContext } from '../../contexts/Home.context'
-import Blog1 from '../../assets/images/blog1.jpg'
+// import Blog1 from '../../assets/images/blog1.jpg'
 export default function SectionBlog() {
     const { posts } = useContext(HomeContext)
     return (
