@@ -3,10 +3,16 @@ import styled from 'styled-components';
 import Breadcrumb from '../components/core/Breadcrumb';
 import MainProducts from '../containers/products/MainProducts';
 import SidebarProduct from '../containers/products/MainProducts'
+const itemsProducts = [
+    {
+        href: "/products",
+        text: "Products"
+    }
+]
 export default function Products() {
     return (
         <ProductsWrap>
-            <Breadcrumb href="/products" text="Products" className="breadcrumb mb-4" />
+            <Breadcrumb items={itemsProducts} className="breadcrumb mb-4" />
             <div className="container">
                 <div className="row-fb">
                     <div className="col-fb-3">

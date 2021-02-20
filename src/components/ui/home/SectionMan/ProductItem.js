@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { configGlobal } from './../../../../assets/styledGlobal/configGlobal'
-import Heading from './../../../core/Heading'
-import Img from './../../../core/Img'
-import Rating from './../../../core/Rating'
+import { configGlobal } from '../../../../assets/styledGlobal/configGlobal'
+import Heading from '../../../core/Heading'
+import Img from '../../../core/Img'
+import Rating from '../../../core/Rating'
 // import ProductImg from './../../../../assets/images/product1.jpg'
 import {formatPrice} from '../../../../ultis/helpers'
 import { Link } from 'react-router-dom'
@@ -12,7 +12,7 @@ export default function ProductItem({id,name,price,image,colors,company,descript
     return (
         <ProductItemWrap className="col-fb-4">
             {status !== "" && (<div className={`badge text-upp badge-${status}`}>{status}</div>)}
-            <Link to={`/product/${id}`} >
+            <Link to={`/products/${id}`}>
                 <Img src={image} alt={name} />
                 <Heading tag='h6' className="mt-1 mb-1" text={name} />
             </Link>

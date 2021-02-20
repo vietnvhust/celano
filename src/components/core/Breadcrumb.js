@@ -2,8 +2,9 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { configGlobal } from '../../assets/styledGlobal/configGlobal';
+import BreadcrumbItem from './BreadcrumbItem';
 
-export default function Breadcrumb({href, text, divider="//", ...props}) {
+export default function Breadcrumb({items, divider="//", ...props}) {
     return (
         <BreadcrumbWrap {...props}>
             <div className="container">
@@ -11,12 +12,9 @@ export default function Breadcrumb({href, text, divider="//", ...props}) {
                     <li>
                         <Link to='' >Home</Link>
                     </li>
-                    <li className="divider">
-                        <span>{divider}</span>
-                    </li>
-                    <li>
-                        <Link to={href} >{text}</Link>
-                    </li>
+                    {
+                        items.length > 0 && items.map(({href, text}, index) => <BreadcrumbItem divider={divider} key={index} href={href} text={text} />)
+                    }
                 </ul>
             </div>
         </BreadcrumbWrap>

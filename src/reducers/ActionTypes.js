@@ -1,0 +1,4 @@
+export const HOME_PRODUCT_WOMAN = "HOME_PRODUCT_WOMAN"
+export const HOME_PRODUCT_MAN = "HOME_PRODUCT_MAN"
+export const PRODUCTS = "PRODUCTS"
+export const PRODUCT = "PRODUCT"

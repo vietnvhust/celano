@@ -41,11 +41,17 @@ const lists = [
         activeValue: 6
     }
 ]
+const itemsFaq = [
+    {
+        href: "/faq",
+        text: "Faq"
+    }
+]
 export default function Faq() {
     const [active, setActive] = useState(1)
     return (
         <FaqWrap>
-            <Breadcrumb href="/faq" text="Faq" className="breadcrumb mb-4" />
+            <Breadcrumb items={itemsFaq} className="breadcrumb mb-4" />
             <div className="container">
                 <Heading tag="h1" text="Frequently Asked Questions" className="mb-3" />    
                 <div className="row-fb">

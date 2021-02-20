@@ -5,9 +5,7 @@ const HomeContextProvider = ({children}) => {
     const [posts, setPosts] = useState({})
     useEffect(() => {
         async function fetchProduct() {
-            // https://celano-rest-api.herokuapp.com/products
             const res = await fetch("https://celano-rest-api.herokuapp.com/products");
-            // const res = await fetch("https://course-api.com/react-store-products");
             res
                 .json()
                 .then(res => setProducts(res.products))

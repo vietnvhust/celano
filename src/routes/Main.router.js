@@ -5,6 +5,7 @@ const Home = React.lazy(() => import('./../pages/Home'))
 const About = React.lazy(() => import('./../pages/About'))
 const Faq = React.lazy(() => import('./../pages/Faq'))
 const Products = React.lazy(() => import('./../pages/Products'))
+const Product = React.lazy(() => import('./../pages/Product'))
 const routers = [
     {
         path: '/',
@@ -25,6 +26,11 @@ const routers = [
         path: '/products',
         exact: true,
         component: Products
+    },
+    {
+        path: '/product/:id',
+        exact: true,
+        component: Product
     }
 ]
 const MainRouter = () => {
