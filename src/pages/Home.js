@@ -26,14 +26,14 @@ export default function Home() {
                 <SectionBlog />
             </HomeContextProvider>
             <div className="container mb-5">
-                <Divider colorBorder="#f0f0f0" />
+                <Divider className="pt-2 pb-1" colorBorder="#f0f0f0" />
                 <SectionLogo />
-                <Divider colorBorder="#f0f0f0" />
+                <Divider className="pt-2 pb-1" colorBorder="#f0f0f0" />
             </div>
             <SectionInstagram />
             <div className="container mb-3 mt-3">
                 <SectionEndHome />
-                <Divider colorBorder="#f0f0f0" />
+                <Divider className="pt-2 pb-1" colorBorder="#f0f0f0" />
             </div>
         </HomeWrap>
     );

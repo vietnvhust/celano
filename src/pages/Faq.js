@@ -79,7 +79,7 @@ export default function Faq() {
             </div>
             <div className="container mb-3 mt-3">
                 <SectionEndHome />
-                <Divider colorBorder="#f0f0f0" />
+                <Divider className="pt-2 pb-1" colorBorder="#f0f0f0" />
             </div>
         </FaqWrap>
     )

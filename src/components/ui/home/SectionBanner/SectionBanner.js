@@ -14,10 +14,10 @@ function SectionBanner() {
         <section>
             <BannerWrap ref={refHover} ishover={ishover}>
                 <div className="container">
-                    <Heading tag='p' className="text-left text-uppercase" text="Spring Collection" />
-                    <Divider widthDivider="100px" />
-                    <Heading tag='h1' className="text-left text-capitalize" text="Discover our New & Modern Design" />
-                    <Button tag='button' type="button" className="btn btn-primary text-uppercase d-flex ai-center mt-3" text="Discover now" />
+                    <Heading tag='p' className="text-left text-uppercase in-left animation-delay-400" text="Spring Collection" />
+                    <Divider widthDivider="100px" className="in-left pt-2 pb-1 animation-delay-600" />
+                    <Heading tag='h1' className="text-left text-capitalize in-left animation-delay-800" text="Discover our New & Modern Design" />
+                    <Button tag='button' type="button" className="btn btn-primary animation-delay-1000 text-uppercase d-flex ai-center mt-3 in-left" text="Discover now" />
                 </div>
             </BannerWrap>
         </section>

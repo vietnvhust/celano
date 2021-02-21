@@ -2,9 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { configGlobal } from '../../assets/styledGlobal/configGlobal';
 
-function Divider({widthDivider, colorBorder}) {
+function Divider({widthDivider, colorBorder, ...props}) {
     return (
-        <DividerWrap widthDivider={widthDivider} colorBorder={colorBorder} className="pt-2 pb-1">
+        <DividerWrap {...props} widthDivider={widthDivider} colorBorder={colorBorder} >
             <span></span>
         </DividerWrap>
     )
