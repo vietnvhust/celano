@@ -6,7 +6,6 @@ import { ProductContext } from '../../contexts/Product.Context';
 
 export default function SectionWoman() {
     const { fetchHomeProductWoman, woman_products } = useContext(ProductContext)
-    console.log(woman_products);
     useEffect(() => {
         fetchHomeProductWoman()
     }, [])

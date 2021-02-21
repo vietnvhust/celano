@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import StartEmptyImg from './../../assets/images/start-empty.svg'
 import StartImg from './../../assets/images/start.svg'
 import Img from './Img'
-function Rating({withRating}) {
+function Rating({withRating, ...props}) {
     return (
-        <RatingWrap className="rating-wrap mb-1">
+        <RatingWrap {...props}>
             <div className="rating">
                 <div className="start-empty">
                     <span><Img src={StartEmptyImg} alt="start" /></span>

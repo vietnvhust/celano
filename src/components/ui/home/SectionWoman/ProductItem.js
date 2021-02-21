@@ -21,7 +21,7 @@ export default function ProductItem({id,name,price,image,colors,company,descript
                     price && (<span className="regular_price">{formatPrice(price)}</span>)
                 }
             </div>
-            <Rating withRating={withRating} />
+            <Rating className="mb-1" withRating={withRating} />
         </ProductItemWrap> 
     )
 }
