@@ -1,4 +1,4 @@
-import React, {useContext,useEffect} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import Heading from '../../core/Heading'
 import Rating from '../../core/Rating'

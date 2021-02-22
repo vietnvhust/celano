@@ -9,7 +9,7 @@ export default function SectionManAside() {
     return (
         <SectionManAsideWrap className="col-fb-4">
             <Heading tag="h3" className="text-left text-capitalize" text="Man" />
-            <Button tag="button" className="btn btn-primary smaller text-uppercase mb-2" text="Popular products" />
+            <Button className="btn btn-primary smaller text-uppercase mb-2" text="Popular products" />
             <Img src={ManImg} alt="Women" className="mb-2" />
             <div className="row-fb">
                 <div className="col-fb-6">
@@ -23,7 +23,7 @@ export default function SectionManAside() {
                     <IconText tag='p' text="Accessories" />
                 </div>
             </div>
-            <Button tag="button" className="btn btn-secondary text-uppercase mt-2 w-100" text="view all" />          
+            <Button className="btn btn-secondary text-uppercase mt-2 w-100" text="view all" />
         </SectionManAsideWrap>
     )
 }

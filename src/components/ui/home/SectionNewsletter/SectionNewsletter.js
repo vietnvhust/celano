@@ -12,7 +12,7 @@ export default function SectionNewsletter() {
                     <Heading text="Sign Up For Our Newsletter" tag="h3"/>
                     <Heading className="mt-1 mb-2" text="It is a long established fact that a reader will be distracted by the readable content of a page." tag="p" />
                     <Input className="form-control w-100 text-center mb-2" placeholder="Your Email Address..." />
-                    <Button text="Subscribe" tag="button" className="btn btn-primary" />
+                    <Button text="Subscribe" className="btn btn-primary" />
                 </div>
             </div>
         </SectionNewsletterWrap>

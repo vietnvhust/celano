@@ -1,11 +1,12 @@
 import React from 'react'
 // import styled from 'styled-components'
 
-function Button({tag,text,...props}) {
+function Button({text,...props}) {
     return (
-        React.createElement('div','',
-            React.createElement(tag,{...props},text)
-        )
+        // React.createElement('div','',
+        //     React.createElement(tag,{...props},text)
+        // )
+        <button {...props} >{text}</button>
     )
 }
 export default React.memo(Button)

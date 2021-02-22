@@ -4,3 +4,6 @@ export const PRODUCTS = "PRODUCTS"
 export const PRODUCT = "PRODUCT"
 
 export const LOAD_PRODUCT = "LOAD_PRODUCT"
+export const FILTER_PRODUCTS = "FILTER_PRODUCTS"
+export const LOAD_CATEGORIES = "LOAD_CATEGORIES"
+export const UPDATE_FILTERS = "UPDATE_FILTERS"
