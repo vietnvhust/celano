@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 import Breadcrumb from '../components/core/Breadcrumb';
-import MainProducts from '../containers/products/MainProducts';
-import SidebarProduct from '../containers/products/MainProducts'
+import Divider from '../components/core/Divider';
+import SectionEndHome from '../components/ui/home/SectionEndHome/SectionEndHome';
+import MainProduct from '../containers/products/MainProduct';
+import SidebarProduct from '../containers/products/SidebarProduct'
 const itemsProducts = [
     {
         href: "/products",
@@ -19,9 +21,13 @@ export default function Products() {
                         <SidebarProduct />
                     </div>
                     <div className="col-fb-9">
-                        <MainProducts />
+                        <MainProduct />
                     </div>
                 </div>
+            </div>
+            <div className="container mb-3 mt-3">
+                <SectionEndHome />
+                <Divider className="pt-2 pb-1" colorBorder="#f0f0f0" />
             </div>
         </ProductsWrap>
     )

@@ -3,3 +3,4 @@ export const HOME_PRODUCT_MAN = "HOME_PRODUCT_MAN"
 export const PRODUCTS = "PRODUCTS"
 export const PRODUCT = "PRODUCT"
 
+export const LOAD_PRODUCT = "LOAD_PRODUCT"

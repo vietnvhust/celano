@@ -10,11 +10,9 @@ export default function Colors({handleSelectColor, colors, ...props}) {
     }
     return (
         <ColorsWrap {...props}>
-            <div className="wrap">
-                {
-                    !!colors && colors.map((item, index) => <ColorItem onClick={()=>handleClickColor(index)} className={`color_item ${active === index ? "active" : ""}`} key={index} color={item} />)
-                }
-            </div>
+            {
+                !!colors && colors.map((item, index) => <ColorItem onClick={()=>handleClickColor(index)} className={`color_item ${active === index ? "active" : ""}`} key={index} color={item} />)
+            }
         </ColorsWrap>
     )
 }
