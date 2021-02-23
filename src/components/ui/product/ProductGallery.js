@@ -12,7 +12,7 @@ import NextImg from '../../../assets/images/button_slider_down.svg'
 import PrevImg from '../../../assets/images/button_slider_up.svg'
 // import PrevImgActive from '../../../assets/images/button_slider_up_active.svg'
 import { configGlobal } from '../../../assets/styledGlobal/configGlobal'
-export default function ProductGallery({images}) {
+export default function ProductGallery({images, image}) {
     const [indexSlider, setIndexSlider] = useState(0)
     const prevSlide = () => {
         const indexCurrent = indexSlider

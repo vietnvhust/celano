@@ -5,6 +5,7 @@ import Divider from '../components/core/Divider';
 import SectionEndHome from '../components/ui/home/SectionEndHome/SectionEndHome';
 import MainProduct from '../containers/products/MainProduct';
 import SidebarProduct from '../containers/products/SidebarProduct'
+import Pagination from "../components/ui/products/MainProduct/Pagination";
 const itemsProducts = [
     {
         href: "/products",
@@ -22,6 +23,7 @@ export default function Products() {
                     </div>
                     <div className="col-fb-9">
                         <MainProduct />
+                        <Pagination/>
                     </div>
                 </div>
             </div>

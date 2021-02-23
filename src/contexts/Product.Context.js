@@ -12,10 +12,10 @@ const initialState = {
     products: [],
     product: {}
 }
-const uri = "https://celano-rest-api.herokuapp.com/products"
-const uri_woman = "https://celano-rest-api.herokuapp.com/productcategories/602fd7a16ab8691e35e31088/products"
-const uri_man = "https://celano-rest-api.herokuapp.com/productcategories/602fd7a96ab8691e35e31089/products"
-const uri_product = "https://celano-rest-api.herokuapp.com/products"
+const uri = "http://localhost:5000/products"
+const uri_woman = "http://localhost:5000/productcategories/602fd7a16ab8691e35e31088/products"
+const uri_man = "http://localhost:5000/productcategories/602fd7a96ab8691e35e31089/products"
+const uri_product = "http://localhost:5000/products"
 export const ProductContext = createContext();
 export default function ProductProvider({ children }) {
     const [state, dispatch] = useReducer(reducer, initialState)
