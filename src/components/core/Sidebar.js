@@ -4,6 +4,7 @@ import CloseImg from '../../assets/images/close.svg'
 import Img from "./Img";
 import {CartContext} from "../../contexts/Cart.Context";
 import CartImg from "../../assets/images/cart.svg";
+import {configGlobal} from "../../assets/styledGlobal/configGlobal";
 const Sidebar = ({children}) => {
     const {isOpenSidebar, closeSidebar} = useContext(CartContext)
     return (
@@ -25,13 +26,13 @@ const SidebarWrap = styled.div`
     right: 0;
     height: 100vh;
     width: 300px;
-    overflow: hidden;
     .inner {
         position: relative;
         width: 100%;
         height: 100%;
-        background-color: #f0f0f0;    
+        background-color: #ffffff;    
         z-index: 1000;
+        box-shadow: -2px 4px 6px 0px rgb(0 0 0 / 5%);
         .content {
             padding: 0 20px;
         }

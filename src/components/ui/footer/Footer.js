@@ -64,6 +64,9 @@ export default function Footer() {
                     <div className="total text-center">
                         <span>Tổng: {total}</span>
                     </div>
+                    <div className="cart text-center">
+                        <Link to={'/cart'}>Cart</Link>
+                    </div>
                 </Sidebar>
             </FooterWrap>
 
@@ -75,6 +78,9 @@ const FooterWrap = styled.footer`
     .cart-inner {
         &__item {
             padding: 20px 0;
+            &:not(:last-child) {
+                border-bottom: 1px solid #e0e0e0;
+            }
         }
         img {
             width: 12px;
@@ -114,6 +120,16 @@ const FooterWrap = styled.footer`
         display: block;
         background-color: ${configGlobal.colorPrimary};
         color: white;
+    }
+    .cart {
+        margin-top: 1rem;
+        padding: 10px;
+        display: block;
+        background-color: ${configGlobal.colorSecondary};
+        a {
+            color: white;
+            display: block;
+        }
     }
     .shop-now {
         padding: 10px;
