@@ -13,6 +13,7 @@ import {
 const FilterReducer = (state, {type, payload}) => {
     switch (type) {
         case FILTER_PRODUCTS:
+            console.log(state)
             const {all_products} = state
             const {category, color} = state.filters
             let products = [...all_products]
@@ -36,21 +37,24 @@ const FilterReducer = (state, {type, payload}) => {
                     )
                 );
             }
-            return {...state, filtered_products: products}
+            const totalPageFilter = Math.ceil(products.length / state.limit)
+            const newDatasFilter = Array.from({length:totalPageFilter}, (_, index) => {
+                const startRecord = index * state.limit
+                return [...products].slice(startRecord, startRecord + state.limit)
+            })
+            return {...state, filtered_products: products,total: totalPageFilter, data_products:newDatasFilter }
         case LOAD_CATEGORIES:
             return {...state, all_categories: [...payload]}
         case LOAD_PRODUCT:
-
-            return {...state, all_products: [...payload]}
+            return {...state, all_products: [...payload], filtered_products: [...payload]}
         case UPDATE_FILTERS:
             const {name, value} = payload
             return {...state, filters: {...state.filters, [name]: value}}
-
         case LOAD_PAGINATION:
-            const totalPage = Math.ceil(state.all_products.length / state.limit)
+            const totalPage = Math.ceil(state.filtered_products.length / state.limit)
             const newDatas = Array.from({length:totalPage}, (_, index) => {
                 const startRecord = index * state.limit
-                return [...state.all_products].slice(startRecord, startRecord + state.limit)
+                return [...state.filtered_products].slice(startRecord, startRecord + state.limit)
             })
             return {...state, total: totalPage, data_products:newDatas }
         case CHANGE_PAGE:

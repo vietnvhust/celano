@@ -17,18 +17,18 @@ const initialState = {
     all_products: [],
     all_categories: [],
     filtered_products: [],
-    filters: {
-        category: 'all',
-        color: 'all'
-    },
     total: 1,
     page: 0,
     start: 0,
     limit: 3,
-    data_products: []
+    data_products: [],
+    filters: {
+        category: 'all',
+        color: 'all'
+    },
 }
-// const uri_productcategories = "https://celano-rest-api.herokuapp.com/productcategories"
-const uri_productcategories = "http://localhost:5000/productcategories"
+const uri_productcategories = "https://celano-rest-api.herokuapp.com/productcategories"
+// const uri_productcategories = "http://localhost:5000/productcategories"
 export const FilterContext = createContext()
 export default function FilterProvider({children}) {
     const [state, dispatch] = useReducer(reducer, initialState)
