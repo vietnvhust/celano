@@ -13,3 +13,7 @@ export const CHANGE_FIRST = "CHANGE_FIRST"
 export const CHANGE_LAST = "CHANGE_LAST"
 export const CHANGE_PREV = "CHANGE_PREV"
 export const CHANGE_NEXT = "CHANGE_NEXT"
+
+export const ADD_TO_CART = "ADD_TO_CART"
+export const OPEN_SIDEBAR = "OPEN_SIDEBAR"
+export const CLOSE_SIDEBAR = "CLOSE_SIDEBAR"

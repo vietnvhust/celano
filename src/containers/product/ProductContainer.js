@@ -13,7 +13,7 @@ export default function ProductContainer() {
     useEffect(() => {
         fetchProduct(id)
     }, [id])
-    const {name, rating, price, review, sku, stock, colors, images} = product
+    const {name, description} = product
     const itemsProductWrap = [
         {
             href: "/products",
@@ -30,14 +30,14 @@ export default function ProductContainer() {
             <div className="container">
                 <div className="product">
                     <div className="product_top">
-                        <ProductTop id={id} images={images} name={name} price={price} rating={rating} review={review} sku={sku} stock={stock} colors={colors} />
+                        <ProductTop product={product} />
                     </div>
                     <div className="product_middle">
-                        <ProductMiddle />
+                        <ProductMiddle description={description} className="mt-3" />
                     </div>
-                    <div className="product_bottom">
-                        <ProductBottom />
-                    </div>
+                    {/*<div className="product_bottom">*/}
+                    {/*    <ProductBottom />*/}
+                    {/*</div>*/}
                 </div>
             </div>
         </ProductWrap>

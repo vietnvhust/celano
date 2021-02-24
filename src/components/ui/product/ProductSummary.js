@@ -8,7 +8,8 @@ import Reviews from './Reviews'
 import Price from './Price'
 import Sku from './Sku'
 import Stock from './Stock'
-export default function ProductSummary({id, name, rating, price, review, sku, stock, colors}) { 
+export default function ProductSummary({product}) {
+    const {_id, name, rating, price, review, sku, stock, colors, description} = product
     const withRating = (rating*100) / 5;
     return (
         <ProductSummaryWrap className="product_summary">
@@ -21,8 +22,11 @@ export default function ProductSummary({id, name, rating, price, review, sku, st
                 price && (<Price className="product_summary__price" price={price} />)
             }
             <Sku className="product_summary__sku mt-1" sku={sku} />
-            <Stock className="product_summary__stock mt-1" stock={stock} />            
-            <AddToCart colors={colors} stock={stock} id={id} />
+            <Stock className="product_summary__stock mt-1" stock={stock} />
+            <p>
+                {description}
+            </p>
+            <AddToCart colors={colors} stock={stock} price={price ?? 0} id={_id} product={product} />
         </ProductSummaryWrap>
     )
 }

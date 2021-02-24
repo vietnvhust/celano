@@ -1,12 +1,14 @@
-import React,{useState} from 'react'
+import React,{useState,useContext} from 'react'
 import styled from 'styled-components'
 import ButtonAddToCart from './ButtonAddToCart'
 import Quantity from './Quantity'
 import CheckedImg from '../../../assets/images/check.svg'
 import ColorItem from './ColorItem'
-export default function AddToCart({stock, colors, id}) {
+import {CartContext} from "../../../contexts/Cart.Context";
+export default function AddToCart({stock, colors, id, price, product}) {
     const [quantity, setQuantity] = useState(1)
     const [active, setActive] = useState(0)
+    const {addToCart} = useContext(CartContext)
     const increase = () => {
         let increaseQuantity = quantity + 1
         if( increaseQuantity > stock ) {
@@ -33,7 +35,7 @@ export default function AddToCart({stock, colors, id}) {
             {
                 stock > 0 && <AddToCartWrap>            
                     <Quantity quantity={quantity} increase={increase} decrease={decrease} />
-                    <ButtonAddToCart quantity={quantity} id={id} color={colors[active]}  />
+                    <ButtonAddToCart onClick={() => addToCart(id, quantity, colors[active], price, product)} quantity={quantity} id={id} price={price} color={colors[active]}  />
                 </AddToCartWrap>
             }
             

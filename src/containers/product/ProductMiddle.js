@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function ProductMiddle() {
+export default function ProductMiddle({description, ...props}) {
     return (
-        <div>
-            ProductMiddle
+        <div {...props}>
+            {description}
         </div>
     )
 }

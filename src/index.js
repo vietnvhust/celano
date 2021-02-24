@@ -5,16 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ProductProvider from './contexts/Product.Context';
 import FilterProvider from './contexts/Filter.Context';
+import CartProvider from "./contexts/Cart.Context";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ProductProvider>
-      <FilterProvider>
-        <App />
-      </FilterProvider>
-    </ProductProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <ProductProvider>
+            <FilterProvider>
+                <CartProvider>
+                    <App/>
+                </CartProvider>
+            </FilterProvider>
+        </ProductProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

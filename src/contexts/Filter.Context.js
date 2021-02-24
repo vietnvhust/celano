@@ -27,6 +27,7 @@ const initialState = {
     limit: 3,
     data_products: []
 }
+// const uri_productcategories = "https://celano-rest-api.herokuapp.com/productcategories"
 const uri_productcategories = "http://localhost:5000/productcategories"
 export const FilterContext = createContext()
 export default function FilterProvider({children}) {

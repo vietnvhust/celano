@@ -2,17 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import ProductGallery from '../../components/ui/product/ProductGallery'
 import ProductSummary from '../../components/ui/product/ProductSummary'
-export default function ProductTop({name, rating, price, review, sku, stock, colors, images, image}) {
+export default function ProductTop({product}) {
     return (
         <ProductTopWrap className="row-fb">
             <div className="col-fb-6">
                 <div className="inner">
-                    <ProductGallery images={images} image={image} />
+                    <ProductGallery images={product.images} image={product.image} />
                 </div>
             </div>
             <div className="col-fb-6">
                 <div className="inner">
-                    <ProductSummary name={name} price={price} rating={rating} review={review} sku={sku} stock={stock} colors={colors} />
+                    <ProductSummary product={product} />
                 </div>
             </div>
         </ProductTopWrap>
