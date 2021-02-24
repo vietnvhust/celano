@@ -14,15 +14,16 @@ import {formatPrice} from '../../../ultis/helpers'
 import {configGlobal} from "../../../assets/styledGlobal/configGlobal";
 
 export default function Footer() {
-    const {carts} = useContext(CartContext)
-    if(carts.length < 0) {
+    const {carts, removeItem} = useContext(CartContext)
+    if(carts.length < 1) {
         return (
             <FooterWrap>
                 <FooterBottom/>
                 <FooterAbsolute/>
                 <Sidebar>
                     <Heading tag={'h5'} text={'Cart'} className={'text-center'} />
-                    <Heading tag={'p'} text={'Cart Empty'} className={'text-center'} />
+                    <Heading tag={'h6'} text={'Cart Empty'} className={'text-center cart-empty mt-1'} />
+                    <Link className={'shop-now'} to={'/products'}>Go to Shop</Link>
                 </Sidebar>
             </FooterWrap>
         )
@@ -54,7 +55,7 @@ export default function Footer() {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <button className={''} type={'button'}><Img src={CloseImg} alt={'Close'} /></button>
+                                        <button className={''} type={'button'}><Img onClick={()=>removeItem(id)} src={CloseImg} alt={'Close'} /></button>
                                     </div>
                                 </div>
                             )
@@ -113,5 +114,13 @@ const FooterWrap = styled.footer`
         display: block;
         background-color: ${configGlobal.colorPrimary};
         color: white;
+    }
+    .shop-now {
+        padding: 10px;
+        display: block;
+        background-color: ${configGlobal.colorPrimary};
+        color: white;
+        margin-top: 20px;
+        text-align: center;
     }
 `;

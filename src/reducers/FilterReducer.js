@@ -13,7 +13,6 @@ import {
 const FilterReducer = (state, {type, payload}) => {
     switch (type) {
         case FILTER_PRODUCTS:
-            console.log(state)
             const {all_products} = state
             const {category, color} = state.filters
             let products = [...all_products]

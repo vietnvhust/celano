@@ -1,10 +1,15 @@
 import {
     ADD_TO_CART,
     OPEN_SIDEBAR,
-    CLOSE_SIDEBAR
+    CLOSE_SIDEBAR,
+    REMOVE_PRODUCT
 } from './ActionTypes'
 const CartReducer = (state, {type, payload}) => {
     switch (type) {
+        case REMOVE_PRODUCT:
+            const newCarts = [...state.carts].filter(x => x.id !== payload)
+            localStorage.setItem('cart', JSON.stringify(newCarts))
+            return {...state, carts: newCarts}
         case OPEN_SIDEBAR:
             return {...state, isOpenSidebar: true}
         case CLOSE_SIDEBAR:

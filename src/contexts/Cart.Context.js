@@ -1,9 +1,10 @@
-import React, {createContext, useReducer} from 'react'
+import React, {createContext, useReducer, useEffect} from 'react'
 import reducer from '../reducers/CartReducer'
 import {
     ADD_TO_CART,
     OPEN_SIDEBAR,
-    CLOSE_SIDEBAR
+    CLOSE_SIDEBAR,
+    REMOVE_PRODUCT
 } from '../reducers/ActionTypes'
 const getCart = () => {
     let carts = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : []
@@ -26,8 +27,12 @@ export default function CartProvider({children}) {
     const closeSidebar = () => {
         dispatch({type: CLOSE_SIDEBAR})
     }
+    const removeItem = id => {
+        dispatch({type: REMOVE_PRODUCT, payload: id})
+        closeSidebar()
+    }
     return (
-        <CartContext.Provider value={{...state, addToCart, openSidebar, closeSidebar}}>
+        <CartContext.Provider value={{...state, addToCart, openSidebar, closeSidebar, removeItem}}>
             {children}
         </CartContext.Provider>
     )
