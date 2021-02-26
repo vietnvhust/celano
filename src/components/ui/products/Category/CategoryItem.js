@@ -4,10 +4,11 @@ import { configGlobal } from '../../../../assets/styledGlobal/configGlobal';
 import Button from "../../../core/Button";
 import {FilterContext} from "../../../../contexts/Filter.Context";
 export default function CategoryItem({id, name, products}) {
-    const { updateFilter } = useContext(FilterContext)
+    const { updateFilter, filters } = useContext(FilterContext)
+    const {category} = filters
     return (
         <CategoryItemWrap>
-            <Button className={"text-cap"} onClick={updateFilter} data-category={id} name={'category'} text={name} />
+            <Button className={`text-cap ${category === id ? 'active': ''}`} onClick={updateFilter} data-category={id} name={'category'} text={name} />
         </CategoryItemWrap>
     )
 }
@@ -23,6 +24,10 @@ const CategoryItemWrap = styled.li`
         cursor:pointer;
         font-size: 14px;
         &:hover {
+            color: ${configGlobal.colorPrimary};
+            transform: ${configGlobal.transition};
+        }
+        &.active {
             color: ${configGlobal.colorPrimary};
             transform: ${configGlobal.transition};
         }

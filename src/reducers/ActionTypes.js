@@ -18,3 +18,6 @@ export const ADD_TO_CART = "ADD_TO_CART"
 export const REMOVE_PRODUCT = "REMOVE_PRODUCT"
 export const OPEN_SIDEBAR = "OPEN_SIDEBAR"
 export const CLOSE_SIDEBAR = "CLOSE_SIDEBAR"
+
+export const OPEN_LOGIN = "OPEN_LOGIN"
+export const CLOSE_LOGIN = "CLOSE_LOGIN"

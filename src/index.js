@@ -7,17 +7,21 @@ import ProductProvider from './contexts/Product.Context';
 import FilterProvider from './contexts/Filter.Context';
 import CartProvider from "./contexts/Cart.Context";
 import {BrowserRouter as Router} from "react-router-dom";
+import UserProvider from "./contexts/User.Context";
+
 ReactDOM.render(
     <React.StrictMode>
-        <ProductProvider>
-            <FilterProvider>
-                <CartProvider>
-                    <Router>
-                        <App/>
-                    </Router>
-                </CartProvider>
-            </FilterProvider>
-        </ProductProvider>
+        <UserProvider>
+            <ProductProvider>
+                <FilterProvider>
+                    <CartProvider>
+                        <Router>
+                            <App/>
+                        </Router>
+                    </CartProvider>
+                </FilterProvider>
+            </ProductProvider>
+        </UserProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

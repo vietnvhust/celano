@@ -41,7 +41,7 @@ const FilterReducer = (state, {type, payload}) => {
                 const startRecord = index * state.limit
                 return [...products].slice(startRecord, startRecord + state.limit)
             })
-            return {...state, filtered_products: products,total: totalPageFilter, data_products:newDatasFilter }
+            return {...state, filtered_products: products,total: totalPageFilter, data_products:newDatasFilter, page: 0 }
         case LOAD_CATEGORIES:
             return {...state, all_categories: [...payload]}
         case LOAD_PRODUCT:

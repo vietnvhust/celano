@@ -12,6 +12,7 @@ import CloseImg from "../../../assets/images/close.svg";
 // import FooterTop from './FooterTop'
 import {formatPrice} from '../../../ultis/helpers'
 import {configGlobal} from "../../../assets/styledGlobal/configGlobal";
+import Modal from "../../core/Modal";
 
 export default function Footer() {
     const {carts, removeItem} = useContext(CartContext)
@@ -68,6 +69,9 @@ export default function Footer() {
                         <Link to={'/cart'}>Cart</Link>
                     </div>
                 </Sidebar>
+                <Modal>
+                    aaaaaaaaaaaaa
+                </Modal>
             </FooterWrap>
 
         )

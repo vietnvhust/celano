@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import CloseImg from '../../assets/images/close.svg'
 import Img from "./Img";
 import {CartContext} from "../../contexts/Cart.Context";
-import CartImg from "../../assets/images/cart.svg";
-import {configGlobal} from "../../assets/styledGlobal/configGlobal";
+// import CartImg from "../../assets/images/cart.svg";
+// import {configGlobal} from "../../assets/styledGlobal/configGlobal";
 const Sidebar = ({children}) => {
     const {isOpenSidebar, closeSidebar} = useContext(CartContext)
     return (

@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import MapIcon from '../../../../assets/images/map.svg'
 import PhoneIcon from '../../../../assets/images/phone1.svg'
 import styled from 'styled-components'
 import Img from "../../../core/Img";
 import Heading from "../../../core/Heading";
+import {UserContext} from "../../../../contexts/User.Context";
 const TopHeader = () => {
+    const {openLogin} = useContext(UserContext)
     return (
         <TopHeaderWrap>
             <div className="container">
@@ -22,7 +24,7 @@ const TopHeader = () => {
                         </div>
                     </div>
                     <div className="col-fb-6">
-                        <Heading tag={'span'} text={'Sign In  or  Register'} className={'float-right'} />
+                        <Heading tag={'span'} text={'Sign In  or  Register'} onClick={openLogin} className={'float-right'} />
                     </div>
                 </div>
             </div>
